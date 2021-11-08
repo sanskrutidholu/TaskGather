@@ -21,7 +21,7 @@ class FirebaseOperations {
         val data = NoteModel(userId,key,title,desc,time)
         val noteRef : DatabaseReference = database.getReference("TextNotes").child(key)
         noteRef.setValue(data).addOnSuccessListener {
-            addNoteCount(userId)
+            AllTypesCount().addNoteCount(userId)
         }
     }
 
@@ -34,7 +34,7 @@ class FirebaseOperations {
     fun deleteSingleNote(noteId: String,userId: String) {
         database.getReference("TextNotes").child(noteId)
             .removeValue().addOnSuccessListener {
-                removeNoteCount(userId)
+                AllTypesCount().removeNoteCount(userId)
 
         }
     }
@@ -43,80 +43,18 @@ class FirebaseOperations {
         val imageData = ImageModel(userId,id,caption,url,time)
         val imageRef : DatabaseReference = database.getReference("ImageNotes").child(id)
         imageRef.setValue(imageData).addOnSuccessListener {
-            addImageCount(userId)
+            AllTypesCount().addImageCount(userId)
         }
     }
 
     fun deleteSingleImage(imageId : String,userId: String) {
         database.getReference("ImageNotes").child(imageId)
             .removeValue().addOnSuccessListener {
-                removeImageCount(userId)
+                AllTypesCount().removeImageCount(userId)
             }
     }
 
-    fun addNoteCount(userId: String) {
-        val userRef : DatabaseReference = database.getReference("Users").child(userId)
-        userRef.addListenerForSingleValueEvent(object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()){
-                    val noteCount = snapshot.child("totalNotes").value as Long
-                    snapshot.child("totalNotes").ref.setValue(noteCount+1)
-                }
-            }
 
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
-    }
-
-    fun removeNoteCount(userId: String) {
-        val userRef : DatabaseReference = database.getReference("Users").child(userId)
-        userRef.addListenerForSingleValueEvent(object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()){
-                    val noteCount = snapshot.child("totalNotes").value as Long
-                    snapshot.child("totalNotes").ref.setValue(noteCount-1)
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
-    }
-
-    fun addImageCount(userId: String) {
-        val userRef : DatabaseReference = database.getReference("Users").child(userId)
-        userRef.addListenerForSingleValueEvent(object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()){
-                    val noteCount = snapshot.child("totalImages").value as Long
-                    snapshot.child("totalImages").ref.setValue(noteCount+1)
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
-    }
-
-    fun removeImageCount(userId: String) {
-        val userRef : DatabaseReference = database.getReference("Users").child(userId)
-        userRef.addListenerForSingleValueEvent(object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()){
-                    val noteCount = snapshot.child("totalImages").value as Long
-                    snapshot.child("totalImages").ref.setValue(noteCount-1)
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
-    }
 
 
 
