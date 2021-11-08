@@ -13,6 +13,7 @@ import com.example.taskgather.conversion.TimeConversion
 import com.example.taskgather.models.NoteModel
 import com.example.taskgather.utils.FirebaseOperations
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
 class NoteAdapter(var context: Context, var noteList : ArrayList<NoteModel>, var listener: ItemClickListener)
@@ -38,7 +39,7 @@ class NoteAdapter(var context: Context, var noteList : ArrayList<NoteModel>, var
             Snackbar.make(v, "Are you sure to delete", Snackbar.LENGTH_SHORT)
                 .setAction("Delete", View.OnClickListener {
 
-                    FirebaseOperations().deleteSingleNote(noteItem.noteId)
+                    FirebaseOperations().deleteSingleNote(noteItem.noteId,noteItem.userId)
                     notifyItemRemoved(position)
 
                 }).show()
@@ -68,5 +69,4 @@ class NoteAdapter(var context: Context, var noteList : ArrayList<NoteModel>, var
 
 interface ItemClickListener{
     fun onEditClick(noteModel: NoteModel)
-
 }

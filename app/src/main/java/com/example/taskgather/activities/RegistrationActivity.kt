@@ -46,7 +46,7 @@ class RegistrationActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    FirebaseOperations().registerUser(auth.currentUser!!.uid,userName,email)
+                    FirebaseOperations().registerUser(auth.currentUser!!.uid,userName,email,0,0)
                     Toast.makeText(this, "User registered...", Toast.LENGTH_LONG).show()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()

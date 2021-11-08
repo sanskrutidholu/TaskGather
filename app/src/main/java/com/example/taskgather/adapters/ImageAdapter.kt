@@ -39,7 +39,7 @@ class ImageAdapter(var context: Context, var imageList: ArrayList<ImageModel>): 
             Snackbar.make(v, "Are you sure to delete", Snackbar.LENGTH_SHORT)
                 .setAction("Delete", View.OnClickListener {
 
-                    FirebaseOperations().deleteSingleImage(currentPost.ImageId)
+                    FirebaseOperations().deleteSingleImage(currentPost.ImageId,currentPost.userId)
                     notifyItemRemoved(position)
 
                 }).show()
@@ -50,12 +50,6 @@ class ImageAdapter(var context: Context, var imageList: ArrayList<ImageModel>): 
     override fun getItemCount(): Int {
         return imageList.size
     }
-
-//    fun updatePosts(postList: List<PostItem>){
-//        allPosts.clear()
-//        allPosts.addAll(postList)
-//        notifyDataSetChanged()
-//    }
 
     inner class ImageViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
         val image : ImageView = itemView.findViewById(R.id.imageUpload)

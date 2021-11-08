@@ -57,7 +57,7 @@ class UploadImagesFragment : Fragment() {
                 ref.putBytes(ImageConversion.bitmapToByteArray(imageBitmap!!,500000))
                     .addOnSuccessListener {
                         ref.downloadUrl.addOnSuccessListener {
-                            FirebaseOperations().uploadImageToDatabase(auth.currentUser!!.uid,filename,captionEditText.text.toString(),it.toString(),currentTime)
+                            FirebaseOperations().saveImageNote(auth.currentUser!!.uid,filename,captionEditText.text.toString(),it.toString(),currentTime)
                             Toast.makeText(this.requireContext(), "Uploading...", Toast.LENGTH_SHORT).show()
                             layout.visibility = View.GONE
                         }
