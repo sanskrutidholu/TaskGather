@@ -15,22 +15,22 @@
 
         <TextView
             android:id="@+id/textView"
-            android:text="YOUR IMAGES"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="YOUR IMAGES"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:textColor="@color/green"/>
+            android:textColor="@color/green"
+            android:gravity="center"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/image_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:padding="5dp"
             android:layout_below="@id/textView"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_marginTop="10dp"/>
 
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

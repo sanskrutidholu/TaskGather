@@ -53,10 +53,4 @@ class FirebaseOperations {
                 AllTypesCount().removeImageCount(userId)
             }
     }
-
-
-
-
-
-
 }

@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/add_image.xml" value="0.1" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/card_bg.xml" value="0.20185185185185187" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/image_upload.xml" value="0.1" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_image.xml" value="0.16666666666666666" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_note.xml" value="0.2" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_registration.xml" value="0.2" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/addnote_bottomsheet.xml" value="0.2" />
@@ -16,7 +17,7 @@
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/fragment_upload_images.xml" value="0.2" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/image_layout.xml" value="0.2" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/note_layout.xml" value="0.2" />
-        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/sample.xml" value="0.2" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/sample.xml" value="0.22" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/menu/image_menu.xml" value="0.16666666666666666" />
       </map>
     </option>
