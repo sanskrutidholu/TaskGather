@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#06FAAD</item>
+        <item name="colorPrimaryDark">#12E4B4</item>
+        <item name="colorAccent">#08F496</item>
+    </style>
+
+    <!--    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+    <!--    <style name="AppBottomSheetDialogTheme"-->
+    <!--        parent="Theme.MaterialComponents.BottomSheetDialog">-->
+    <!--        <item name="android:windowIsFloating">false</item>-->
+    <!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+    <!--        <item name="android:windowSoftInputMode">adjustResize</item>-->
+    <!--        <item name="bottomSheetStyle">@style/AppModalStyle</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="AppModalStyle"-->
+    <!--        parent="Widget.Design.BottomSheet.Modal">-->
+    <!--        <item name="android:background">@drawable/dialog_round</item>-->
+    <!--    </style>-->
+</resources>
