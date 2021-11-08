@@ -7,25 +7,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_container">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:src="@drawable/empty_view_bg2"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="No Notes Added"
-        android:layout_marginTop="50dp"/>
-
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/fab_menu"
         android:layout_width="wrap_content"
