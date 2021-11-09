@@ -43,7 +43,7 @@ class EditNoteFragment : Fragment() {
                 val title = binding.etTitle.text.toString()
                 val desc = binding.etDesc.text.toString()
 
-                FirebaseOperations().updateTextNote(auth.currentUser!!.uid,noteId,title,desc, System.currentTimeMillis())
+                FirebaseOperations().updateTextNote(note!!.userId,noteId,title,desc, System.currentTimeMillis())
                 binding.editFragmentLayout.visibility = View.GONE
                 Toast.makeText(context,"Note Updated...", Toast.LENGTH_SHORT).show()
             }

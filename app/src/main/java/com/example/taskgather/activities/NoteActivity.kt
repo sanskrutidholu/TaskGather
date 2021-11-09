@@ -77,7 +77,7 @@ class NoteActivity : AppCompatActivity(), ItemClickListener {
 
         save.setOnClickListener {
             FirebaseOperations().saveTextNote(auth.currentUser!!.uid,title.text.toString(), desc.text.toString(),System.currentTimeMillis())
-            Toast.makeText(this,"Contents Upload...",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Notes Added...",Toast.LENGTH_SHORT).show()
             dialog.dismiss()
         }
 
