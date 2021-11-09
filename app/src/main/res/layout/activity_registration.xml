@@ -7,25 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".activities.RegistrationActivity">
 
-    <TextView
-        android:id="@+id/asd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center_horizontal"
-        android:text="Registration"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/asd"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
-        android:src="@drawable/empty_view_bg2" />
+        android:src="@drawable/empty_view_bg_2" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -86,12 +74,15 @@
 
     <Button
         android:id="@+id/registerBtn"
-        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@color/Orange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/passwordTIL"
         android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:padding="5dp"
         android:text="  Register " />
 
@@ -99,11 +90,11 @@
         android:id="@+id/have_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/registerBtn"
+        android:gravity="center_horizontal"
         android:text="Already have an account? Login"
         android:textAlignment="center"
-        android:textStyle="bold"
-        android:layout_below="@id/registerBtn"
-        android:textColor="@color/black"
-        android:gravity="center_horizontal" />
+        android:textColor="@color/Orange"
+        android:textStyle="bold" />
 
 </RelativeLayout>

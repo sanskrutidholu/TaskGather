@@ -14,22 +14,22 @@
 
         <TextView
             android:id="@+id/textView"
-            android:text="All Text Notes"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/green"/>
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="All Text Notes"
+            android:textColor="@color/Orange"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notes_recyclerView"
-            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@id/textView"
             android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:padding="5dp" />
 
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

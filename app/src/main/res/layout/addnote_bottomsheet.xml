@@ -17,9 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ADD YOUR NOTE"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textColor="@color/Orange"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutText"
@@ -61,13 +61,14 @@
             android:id="@+id/btn_save"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:text="SAVE NOTE"
-            android:padding="10dp"
-            android:backgroundTint="@color/black"
             android:layout_below="@id/layoutdesc"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="30dp"/>
+            android:textColor="@color/white"
+            android:backgroundTint="@color/Orange"
+            android:padding="10dp"
+            android:text="SAVE NOTE" />
 
     </RelativeLayout>
 

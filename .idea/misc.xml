@@ -5,9 +5,14 @@
       <map>
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/add_image.xml" value="0.1" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/card_bg.xml" value="0.20185185185185187" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/delete.xml" value="0.21614583333333334" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/edit_note.xml" value="0.21614583333333334" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.21614583333333334" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/ic_baseline_note_add_24.xml" value="0.21614583333333334" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/image_upload.xml" value="0.1" />
-        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_image.xml" value="0.16666666666666666" />
-        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/drawable/save.xml" value="0.21614583333333334" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_image.xml" value="0.10227272727272728" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_note.xml" value="0.2" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/activity_registration.xml" value="0.2" />
@@ -19,6 +24,7 @@
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/note_layout.xml" value="0.2" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/layout/sample.xml" value="0.22" />
         <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/menu/image_menu.xml" value="0.16666666666666666" />
+        <entry key="..\:/patel/AndroidProjects/myprojects/TaskGather/app/src/main/res/menu/note_menu.xml" value="0.2" />
       </map>
     </option>
   </component>
