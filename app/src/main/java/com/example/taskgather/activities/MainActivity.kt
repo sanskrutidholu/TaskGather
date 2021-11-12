@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        checkUserLoginOrNot()
+        checkUserExists()
 
         fetchUserDetails()
 
@@ -63,6 +63,11 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    private fun redirectToActivities(activity: AppCompatActivity) {
+        val intent = Intent(this, activity::class.java)
+        startActivity(intent)
+    }
+
     private fun checkUserLoginOrNot() {
         if (auth.uid == null){
             val intent = Intent(this, LoginActivity::class.java)
@@ -74,8 +79,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUserExists() {
-        val userRef : DatabaseReference = FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().uid.toString())
-        //val ref = DatabaseLocations.getUserReference(FirebaseAuth.getInstance().uid.toString())
+        val userRef : DatabaseReference = FirebaseDatabase.getInstance().getReference("Users").child(
+            FirebaseAuth.getInstance().uid.toString())
         userRef.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.value == null){
@@ -88,10 +93,5 @@ class MainActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
-    }
-
-    private fun redirectToActivities(activity: AppCompatActivity) {
-        val intent = Intent(this, activity::class.java)
-        startActivity(intent)
     }
 }

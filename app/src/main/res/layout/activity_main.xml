@@ -67,6 +67,7 @@
 
     <LinearLayout
         android:id="@+id/layout1"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -83,9 +84,11 @@
 
         <TextView
             android:id="@+id/tv_name"
+            android:drawablePadding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/user"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="25dp"
             android:textColor="@color/black"
             android:textSize="20dp"/>
@@ -101,9 +104,11 @@
 
         <TextView
             android:id="@+id/tv_email"
+            android:drawablePadding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/email"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="25dp"
             android:textColor="@color/black"
             android:textSize="20dp"/>
@@ -196,8 +201,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_note_add_24"
-            app:fab_colorNormal="?attr/colorAccent"
-            app:fab_colorPressed="?attr/colorAccent"
+            app:fab_colorNormal="@color/Yellow"
+            app:fab_colorPressed="@color/Yellow"
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -205,8 +210,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/add_image"
-            app:fab_colorNormal="?attr/colorAccent"
-            app:fab_colorPressed="?attr/colorAccent"
+            app:fab_colorNormal="@color/Yellow"
+            app:fab_colorPressed="@color/Yellow"
             fab:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>
