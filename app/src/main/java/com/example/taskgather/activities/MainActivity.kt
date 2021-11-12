@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        checkUserExists()
+        checkUserLoginOrNot()
 
         fetchUserDetails()
 
