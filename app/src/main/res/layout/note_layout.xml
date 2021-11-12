@@ -78,7 +78,7 @@
             android:layout_height="25dp"
             android:layout_below="@+id/layout2"
             android:layout_marginTop="15dp"
-            android:gravity="center">
+            android:gravity="end">
 
             <ImageButton
                 android:id="@+id/btn_edit"
@@ -90,8 +90,15 @@
                 android:id="@+id/btn_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="105dp"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/delete" />
+
+            <ImageButton
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/share" />
 
         </LinearLayout>
     </RelativeLayout>

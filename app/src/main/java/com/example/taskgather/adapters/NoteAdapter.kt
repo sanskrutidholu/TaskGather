@@ -15,6 +15,13 @@ import com.example.taskgather.utils.FirebaseOperations
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
+import android.content.Intent
+import androidx.core.content.ContextCompat
+
+import androidx.core.content.ContextCompat.startActivity
+
+
+
 
 class NoteAdapter(var context: Context, var noteList : ArrayList<NoteModel>, var listener: ItemClickListener)
     : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
@@ -49,6 +56,9 @@ class NoteAdapter(var context: Context, var noteList : ArrayList<NoteModel>, var
             listener.onEditClick(noteList[position])
         }
 
+        holder.share.setOnClickListener {
+            listener.onShareClick(noteList[position])
+        }
     }
 
 
@@ -62,6 +72,7 @@ class NoteAdapter(var context: Context, var noteList : ArrayList<NoteModel>, var
         var date: TextView = itemView.findViewById(R.id.tv_date)
         var delete: ImageButton = itemView.findViewById(R.id.btn_delete)
         var edit: ImageButton = itemView.findViewById(R.id.btn_edit)
+        var share : ImageButton = itemView.findViewById(R.id.btn_share)
 
     }
 
@@ -69,4 +80,5 @@ class NoteAdapter(var context: Context, var noteList : ArrayList<NoteModel>, var
 
 interface ItemClickListener{
     fun onEditClick(noteModel: NoteModel)
+    fun onShareClick(noteModel: NoteModel)
 }

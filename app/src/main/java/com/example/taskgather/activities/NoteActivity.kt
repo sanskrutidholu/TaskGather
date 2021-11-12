@@ -1,6 +1,7 @@
 package com.example.taskgather.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import com.example.taskgather.R
 import android.view.Menu
@@ -8,6 +9,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.taskgather.databinding.ActivityNoteBinding
 import com.example.taskgather.adapters.ItemClickListener
@@ -116,5 +118,14 @@ class NoteActivity : AppCompatActivity(), ItemClickListener {
         mBundle.putString("NOTE_ID",noteModel.noteId)
         mFragment.arguments = mBundle
         mFragmentTransaction.add(R.id.fragmentTransaction,mFragment).commit()
+    }
+
+    override fun onShareClick(noteModel: NoteModel) {
+        val sharingIntent = Intent(Intent.ACTION_SEND)
+        sharingIntent.type = "text/plain"
+        val shareBody = "${noteModel.noteTitle}\n${noteModel.noteDesc}"
+        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, noteModel.noteTitle)
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+        startActivity(Intent.createChooser(sharingIntent, "Share via"))
     }
 }
