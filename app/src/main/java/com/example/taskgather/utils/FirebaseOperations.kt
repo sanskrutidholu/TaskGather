@@ -10,7 +10,7 @@ class FirebaseOperations {
     private val database = FirebaseDatabase.getInstance()//"https://note-app-2bf2f-default-rtdb.asia-southeast1.firebasedatabase.app/")
     private var db : DatabaseReference = database.reference
 
-    fun registerUser (userId:String,name:String,email:String,totalNote:Int,totalImages:Int) {
+    fun registerUser (userId:String,name:String,email:String,totalNote:Long,totalImages:Long) {
         val userDetails = UserModel(userId, name, email,totalNote,totalImages)
         val userRef : DatabaseReference = database.getReference("Users")
         userRef.child(userId).setValue(userDetails)
